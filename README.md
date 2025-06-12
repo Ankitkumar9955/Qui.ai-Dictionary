@@ -9,9 +9,8 @@ Dark/Light Mode: Seamlessly switch between a modern dark theme and a clean light
 Responsive Design: Optimized for a smooth experience across various devices (desktop, tablet, mobile).
 Intuitive UI: A user-friendly interface with smooth animations and interactive elements.
 
-🎨 Color Palette
-The app features a custom color palette for a consistent and modern look:
-
+🎨 Live Demo
+[Click Here](https://ankitkumar9955.github.io/Qui.ai-Dictionary/index.html)
 
 🛠️ Technologies Used
 HTML5: For the core structure of the web application.
@@ -37,6 +36,10 @@ Secondary Text/Placeholders: #606060 (Darker gray)
 ![image](https://github.com/user-attachments/assets/2f8a419b-09f6-41c2-b637-cb9b5f1e7451)
 ![image](https://github.com/user-attachments/assets/f215437c-7a7c-4bdd-88fc-c175aa1f1171)
 
+
+📬 Connect With Me
+🔗 [LinkedIn](https://www.linkedin.com/in/ankit-kumar-sahu9955/)
+💻 [GitHub](https://github.com/Ankitkumar9955)
 
 
 📄 License
