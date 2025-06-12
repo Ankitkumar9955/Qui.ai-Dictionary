@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que.ai Dictionary</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 transition-all duration-300">
+    <div class="w-full max-w-3xl bg-card rounded-2xl shadow-xl flex flex-col overflow-hidden min-h-[70vh] max-h-[90vh] transition-all duration-300">
+        <!-- Header -->
+        <header class="flex items-center justify-between p-4 border-b border-base">
+            <h1 class="text-3xl font-bold text-accent">Que.ai Dictionary</h1>
+            <button id="theme-toggle" class="p-2 rounded-full text-primary hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300">
+                <i class="fas fa-moon text-lg dark:hidden"></i>
+                <i class="fas fa-sun text-lg hidden dark:inline"></i>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 p-6 overflow-y-auto space-y-6">
+            <!-- Word Input & Search -->
+            <div class="flex items-center gap-2">
+                <input
+                    type="text"
+                    id="word-input"
+                    class="flex-1 p-3 rounded-lg border border-base bg-card text-primary placeholder-base focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-200"
+                    placeholder="Enter a word..."
+                    aria-label="Enter word to search"
+                />
+                <button
+                    id="search-button"
+                    class="p-3 rounded-lg btn-accent text-white hover:opacity-90 transition-opacity duration-200 flex-shrink-0 shadow-md flex items-center justify-center"
+                    aria-label="Search word"
+                >
+                    <i class="fas fa-search text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div id="action-buttons" class="flex flex-wrap justify-center gap-3">
+                <button
+                    id="spell-button"
+                    class="p-3 rounded-lg btn-accent text-white hover:opacity-90 transition-opacity duration-200 flex-shrink-0 shadow-md flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    aria-label="Spell the word"
+                    disabled
+                >
+                    <i class="fas fa-volume-up"></i>
+                    <span>Spell Word</span>
+                </button>
+            </div>
+
+            <!-- Dictionary Results Display -->
+            <div id="results-display" class="bg-card p-4 rounded-xl shadow-inner border border-base min-h-[150px] transition-all duration-300">
+                <p id="status-message" class="text-center text-gray-500 dark:text-gray-400 mt-8">Start by typing a word and clicking Search!</p>
+                <!-- Definition, phonetics will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Custom styles for smooth transitions and dark/light mode colors */
+:root {
+    /* Light Theme Color Palette */
+    --bg-light: #F5F5F5; /* Very light gray */
+    --bg-card-light: #FFFFFF; /* White */
+    --text-light: #333333; /* Dark gray */
+    --border-light: #E0E0E0; /* Lighter gray for borders */
+    --placeholder-light: #777777; /* Secondary text color */
+    --accent-light: #007BFF; /* Vibrant blue */
+    --accent-hover-light: #0056B3; /* Darker blue on hover */
+
+    /* Dark Theme Color Palette */
+    --bg-dark: #1A1A1A; /* Dark gray */
+    --bg-card-dark: #2A2A2A; /* Slightly lighter dark gray for cards */
+    --text-dark: #F5F5F5; /* Very light gray */
+    --border-dark: #3A3A3A; /* Darker border */
+    --placeholder-dark: #606060; /* Secondary text color */
+    --accent-dark: #66B2FF; /* Lighter blue for accent */
+    --accent-hover-dark: #3399FF; /* Slightly more vibrant blue on hover */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme */
+.light {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+.light .bg-card {
+    background-color: var(--bg-card-light);
+}
+.light .text-primary {
+    color: var(--text-light);
+}
+.light .border-base {
+    border-color: var(--border-light);
+}
+.light .placeholder-base::placeholder {
+    color: var(--placeholder-light);
+}
+.light .btn-accent {
+    background-color: var(--accent-light);
+    color: white; /* Ensure text is white on light accent */
+}
+.light .btn-accent:hover {
+    background-color: var(--accent-hover-light);
+}
+.light .text-accent {
+    color: var(--accent-light);
+}
+.light .word-display {
+    color: var(--accent-light);
+}
+.light .sub-background { /* For nested elements like the dictionary result box */
+     background-color: #F8F8F8; /* A shade lighter than card, or slightly off-white */
+}
+
+
+/* Dark theme */
+.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+.dark .bg-card {
+    background-color: var(--bg-card-dark);
+}
+.dark .text-primary {
+    color: var(--text-dark);
+}
+.dark .border-base {
+    border-color: var(--border-dark);
+}
+.dark .placeholder-base::placeholder {
+    color: var(--placeholder-dark);
+}
+.dark .btn-accent {
+    background-color: var(--accent-dark); /* Using solid color for dark accents */
+    color: var(--text-dark); /* Text should be light on dark accent */
+}
+.dark .btn-accent:hover {
+    background-color: var(--accent-hover-dark);
+}
+.dark .text-accent {
+    color: var(--accent-dark);
+}
+.dark .word-display {
+    color: var(--accent-dark);
+}
+.dark .sub-background { /* For nested elements like the dictionary result box */
+    background-color: #3A3A3A; /* A shade darker than card, or slightly off-black */
+}
+
+.loading-dots span {
+    animation: bounce 0.6s infinite alternate;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
